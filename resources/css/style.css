@@ -20,6 +20,15 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* ----------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------- */
@@ -97,11 +106,41 @@ h3 {
 /*----- ICONS -----*/
 
 ion-icon{
-    font-size: 400%;
+    font-size: 350%;
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
 }
+
+.icon-small{
+    display: inline-block;
+    font-size: 150%;
+    width: 30px;
+    text-align: center;
+
+    /*secrets to aline text and icons*/ 
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+
+}
+
+/* ----- LINKS --------- */
+
+a:link,
+a:active {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 02s, color 02s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
 /* ----- BUTTONS --------- */
 
 .btn:link,
@@ -155,6 +194,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -250,6 +290,9 @@ header {
 /* ----- HOW OT WORKS -----*/
 /* ----------------------------------- */
 
+.section-steps {
+    background-color: #f4f4f4 ;
+}
 .steps-box:first-child{
     text-align: right;
     padding-right: 3%;
@@ -269,6 +312,10 @@ header {
     margin-bottom: 60px;
 }
 
+.works-step:last-of-type {
+    margin-bottom: 50px;  
+}
+
 .works-step div {
     color: #e67e22;
     border: 2px solid #e67e22;
@@ -281,6 +328,72 @@ header {
     float: left;
     font-size: 150%;
     margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* ----------------------------------- */
+/* ----- CITIES -----*/
+/* ----------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+/* ----------------------------------- */
+/* ----- TESTIMONIALS -----*/
+/* ----------------------------------- */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color:#fff;
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    font-size: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 400%; 
+    display: block;
+    position: absolute;
+    top: -45px;
+    left: -5px;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
 
 
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }

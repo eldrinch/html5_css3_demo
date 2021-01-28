@@ -96,13 +96,13 @@ $(document).ready(function() {
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon ion-icon');
         nav.slideToggle(200);
-        if (icon.has('<ion-icon name="list-outline"></ion-icon>')) {
-            icon.add('<ion-icon name="close-outline"></ion-icon>');
-            icon.remove('<ion-icon name="list-outline"></ion-icon>');
+        if (icon.has('animate__animated list-outline')) {
+            icon.add('animate__animated close-outline');
+            icon.remove('animate__animated list-outline');
 
         } else {
-            icon.add('<ion-icon name="list-outline"></ion-icon>');
-            icon.remove('<ion-icon name="close-outline"></ion-icon>');
+            icon.add('animate__animated list-outline');
+            icon.remove('animate__animated close-outline');
         }
     })
 
